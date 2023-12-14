@@ -1,5 +1,6 @@
 package controller;
 
+import domain.Currency;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -27,8 +28,17 @@ public class CurrencyServlet_ extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
+        Currency c1 = new Currency(1l, "Рубль", "RUB");
+        Currency c2 = new Currency(2l, "Доллар", "USD");
+        Currency c3 = new Currency(3l, "Евро", "EUR");
+        Currency c4 = new Currency(4l, "Песо", "MXN");
+        Currency[] currencies = {c1, c2, c3, c4};
+
+        request.setAttribute("currencies", currencies);
+
+
+//        response.setContentType("text/html");
+//        PrintWriter writer = response.getWriter();
 //        try {
 //            writer.println("<h2>Привет CurrencyServlet</h2>");
 //        } finally {
