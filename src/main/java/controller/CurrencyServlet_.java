@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/HelloCurrencyServlet")
+@WebServlet("/currency")
 public class CurrencyServlet_ extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -29,11 +29,13 @@ public class CurrencyServlet_ extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
-        try {
-            writer.println("<h2>Привет CurrencyServlet</h2>");
-        } finally {
-            writer.close();
-        }
+//        try {
+//            writer.println("<h2>Привет CurrencyServlet</h2>");
+//        } finally {
+//            writer.close();
+//        }
+        request.getRequestDispatcher("/views/currency.jsp").forward(request,
+                    response);
     }
 
     /**

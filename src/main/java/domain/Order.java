@@ -10,13 +10,13 @@ public class Order {
     private String tiker;
     private Long count;
     private Long number;
-    private Date data;
-    private Date duration;
+    private String data;
+    private String duration;
 
     public Order() {
     }
 
-    public Order(Long id, String orderType, String orderVeriety, Currency currency, String tiker, Long count, Long number, Date data, Date duration) {
+    public Order(Long id, String orderType, String orderVeriety, Currency currency, String tiker, Long count, Long number, String data, String duration) {
         this.id = id;
         this.orderType = orderType;
         this.orderVeriety = orderVeriety;
@@ -84,19 +84,19 @@ public class Order {
         this.number = number;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
-    public Date getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(Date duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 

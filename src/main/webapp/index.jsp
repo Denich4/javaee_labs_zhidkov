@@ -3,6 +3,7 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <meta charset="UTF-8">
 <!-- Настройка viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,14 +20,20 @@ pageEncoding="UTF-8"%>
 <h2>Функции системы</h2>
 <ul class="list-group list-group-flush">
 <li class="list-group-item list-group-item-
-primary"><a href="#">Заказ</a>
+primary">
+<a href="/lab9javaee/order">Заказы</a>
 <li class="list-group-item list-group-item-
-info"><a href="#">Не знаю пока</a>
+info">
+<a href="/lab9javaee/currency">Валюты</a>
 </ul>
 </div>
 <br><br>
 </div>
 <jsp:include page="/views/footer.jsp" />
 </div>
+<!-- jQuery -->
+<script src="js/jquery-3.6.4.js"></script>
+<!-- Bootstrap JS + Popper JS -->
+<script defer src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
